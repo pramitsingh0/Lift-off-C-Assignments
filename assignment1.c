@@ -2,15 +2,16 @@
 
 int main (void)
 {
-    int a, b;
-    //taking in input
-    printf("Enter two numbers to perform all arithmetic operations: ");    
-    scanf(" %d %d", &a, &b);
-    //printing out results
-    printf("The product of both numbers is %d\n", a * b);
-    printf("The result of division of first number by second number is: %.2f\n", (float)a / (float)b);
-    printf("The sum of the numbers is: %d\n", a + b);
-    printf("The difference of the numbers is : %d", a - b);
+    int number, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    while (number !=0)
+    {
+        sum = sum + (number % 10);
+        number = number / 10;
+    }
+    printf("%d", sum);
     
     
 }

@@ -2,9 +2,28 @@
 
 int main (void)
 {
-    float cel, fahren;
-    printf("Enter temperature in celcius: ");
-    scanf("%f", &cel);
-    fahren = (cel * 9 / 5) + 32;
-    printf("Temperature in fahrenheit: %0.2f", fahren);
+    int n, sum;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    int arr[n];
+
+    printf("Enter the numbers: ");
+    for (int j = 0; j < n; j++)
+    {
+        scanf("%d", &arr[j]);
+    }
+    
+    for (int i = 0; i < n; i++)
+    {
+        if (arr[i]%2 == 0)
+        {
+            sum += arr[i];
+        }
+        if (i%2 == 0)
+        {
+            sum += arr[i];
+        }
+    }
+    printf("The required sum is: %d", sum);
+    
 }

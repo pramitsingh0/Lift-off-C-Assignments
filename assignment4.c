@@ -2,56 +2,40 @@
 
 int main (void)
 {
-    int full, phy, maths, bio, comp, chem;
-    float per;
-    printf("Enter total marks: ");
-    scanf("%i", &full);
+    int n;
+    printf("enter the number of elements in the array: ");
+    scanf("%d", &n);
 
-    printf("Enter marks obtained!\n");
+    int arr[n];
 
-    printf("Physics: ");
-    scanf("%i", &phy);
-
-    printf("Maths: ");
-    scanf("%i", &maths);
-
-    printf("Computer: ");
-    scanf("%i", &comp);
-
-    printf("Chemistry: ");
-    scanf("%i", &chem);
-
-    printf("Biology: ");
-    scanf("%i", &bio);
-
-    per = ((float)(phy + maths + comp + chem + bio)/full) * 100;
-
-    if(per >= 90)
+    printf("enter the numbers: ");
+    for (int i = 0; i < n; i++)
     {
-        printf("Grade A");
+        scanf("%d", &arr[i]);
     }
-    else if(per >= 80)
+    //print the largest number
+    int large = arr[0];
+    for (int j = 0; j < n; j++)
     {
-        printf("Grade B");
+        if (large < arr[j])
+        {
+            large = arr[j];
+        }
+        
     }
-    else if(per >= 70)
+    printf("The largest number is %d\n", large);
+    
+    //print the smallest number
+    int small = arr[0];
+    for (int i = 0; i < n; i++)
     {
-        printf("Grade C");
+        if (small > arr[i])
+        {
+            //todo
+            small = arr[i];
+        }
+        
     }
-    else if(per >= 60)
-    {
-        printf("Grade D");
-    }
-    else if(per >= 40)
-    {
-        printf("Grade E");
-    }
-    else
-    {
-        printf("Grade F");
-    }
-
-    return 0;
-
+    printf("The smallest number is %d\n", small);
+    
 }
-
